@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ── Blu notte + oro ──────────────────────────── */
+  --midnight-deep: #05080f;
+  --midnight: #090e1a;
+  --midnight-mid: #0e1525;
+
+  --platinum: #ede9e0; /* bianco caldo, non freddo */
+  --silver: #9da8b8; /* grigio-blu per testi secondari */
+
+  --gold: #c9a84c; /* oro principale */
+  --gold-light: #dfc078; /* oro più chiaro per hover/accenti */
+  --gold-dim: rgba(201, 168, 76, 0.18); /* oro trasparente per bg */
+
+  --border: rgba(201, 168, 76, 0.12);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--midnight);
+  color: var(--platinum);
+  font-family: var(--font-display);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--midnight-deep);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--midnight-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
