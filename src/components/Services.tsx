@@ -8,6 +8,21 @@ export function Services() {
 
   const delay = 70;
 
+  const getDomainName = (url: string) => {
+    try {
+      // Se il link non ha il protocollo, l'oggetto URL fallisce.
+      // Quindi ci assicuriamo che lo abbia prima di fare il parsing.
+      const hasProtocol = url.startsWith("http://") || url.startsWith("https://");
+      const urlToParse = hasProtocol ? url : `https://${url}`;
+
+      const parsedUrl = new URL(urlToParse);
+
+      return parsedUrl.hostname.replace("www.", "");
+    } catch (error) {
+      console.error("URL non valido:", error);
+      return "";
+    }
+  };
   return (
     <section className="services__section" id="servizi">
       <Reveal>
@@ -21,7 +36,7 @@ export function Services() {
         {INTERACTIVE_SERVICES.map((s, i) => (
           <Reveal key={s.id} delay={i * delay}>
             <a
-              href={s.url}
+              href={"https://" + s.url}
               className={`service-item ${activeService === s.id ? "service-item--active" : ""}`}
               onMouseEnter={() => setActiveService(s.id)}
               onMouseLeave={() => setActiveService(null)}
@@ -34,7 +49,7 @@ export function Services() {
               </div>
               <div className="service-item__meta">
                 <span className="mono service-item__category">{s.category}</span>
-                <span className="service-item__url mono">{s.url}</span>
+                <span className="service-item__url mono">{getDomainName(s.url)}</span>
               </div>
               <div className="service-item__arrow">↗</div>
             </a>

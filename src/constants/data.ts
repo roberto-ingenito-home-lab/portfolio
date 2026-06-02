@@ -6,28 +6,28 @@ export const INTERACTIVE_SERVICES: Service[] = [
     title: "Cashly",
     category: "Finance",
     desc: "Gestore delle finanze personali con tracciamento spese e dashboard intuitiva.",
-    url: "/cashly",
+    url: "cashly.robertoingenito.com",
   },
   {
     id: "02",
     title: "Mr. White",
     category: "Gaming",
     desc: "Un gioco di deduzione sociale online. Scopri chi è l'infiltrato prima che sia troppo tardi.",
-    url: "/mr-white",
+    url: "mr-white.robertoingenito.com",
   },
   {
     id: "03",
     title: "Calcolatore Finanze",
     category: "Finance",
     desc: "Strumento rapido per proiezioni finanziarie e calcoli di risparmio.",
-    url: "/calcolatore-finanze",
+    url: "calcolatori.robertoingenito.com/calcolatore-finanze",
   },
   {
     id: "04",
     title: "Calcolatore Tasse",
     category: "Finance",
     desc: "Calcolatore per la tassazione italiana, utile per stime di stipendio netto e imposte.",
-    url: "/calcolatore-tasse",
+    url: "calcolatori.robertoingenito.com/calcolatore-tasse",
   },
 ];
 
@@ -37,21 +37,21 @@ export const INFRA_SERVICES: Service[] = [
     title: "Nextcloud",
     category: "Cloud & Productivity",
     desc: "La mia nuvola personale per file, contatti e calendari. Sicurezza e privacy sotto il mio controllo.",
-    url: "/cloud",
+    url: "cloud.robertoingenito.com",
   },
   {
     id: "06",
     title: "Timesheet",
     category: "Utility",
     desc: "Sistema di gestione e generazione di timesheet lavorativi in formato Excel.",
-    url: "/timesheet",
+    url: "timesheet.robertoingenito.com",
   },
   {
     id: "07",
     title: "CouchDB",
     category: "Database",
     desc: "Server database dedicato alla sincronizzazione in tempo reale per Obsidian LiveSync.",
-    url: "/couchdb-obsidian",
+    url: "obsidian.robertoingenito.com",
   },
 ];
 
