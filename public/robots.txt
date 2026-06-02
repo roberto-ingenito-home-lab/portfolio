@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://roberto-ingenito.ddns.net/sitemap.xml
