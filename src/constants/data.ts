@@ -12,7 +12,7 @@ export const INTERACTIVE_SERVICES: Service[] = [
     id: "02",
     title: "Mr. White",
     category: "Gaming",
-    desc: "Un gioco di deduzione sociale online. Scopri chi è l'infiltrato prima che sia troppo tardi.",
+    desc: "Scopri chi è l'infiltrato prima che sia troppo tardi.",
     url: "mr-white.robertoingenito.com",
   },
   {
@@ -36,7 +36,7 @@ export const INFRA_SERVICES: Service[] = [
     id: "05",
     title: "Nextcloud",
     category: "Cloud & Productivity",
-    desc: "La mia nuvola personale per file, contatti e calendari. Sicurezza e privacy sotto il mio controllo.",
+    desc: "Il mio cloud personale. Sicurezza e privacy sotto il mio controllo.",
     url: "cloud.robertoingenito.com",
   },
   {
@@ -50,7 +50,7 @@ export const INFRA_SERVICES: Service[] = [
     id: "07",
     title: "CouchDB",
     category: "Database",
-    desc: "Server database dedicato alla sincronizzazione in tempo reale per Obsidian LiveSync.",
+    desc: "Database dedicato alla sincronizzazione in tempo reale per Obsidian LiveSync.",
     url: "obsidian.robertoingenito.com",
   },
 ];
