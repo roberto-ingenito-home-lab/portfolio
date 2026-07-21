@@ -1,75 +1,56 @@
-# React + TypeScript + Vite
+# 🚀 Roberto Ingenito Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un sito web personale e di presentazione professionale sviluppato per esporre le mie competenze, i servizi offerti e i miei progetti. Il progetto è stato pensato per essere il principale punto di ingresso per recruiter o clienti, ed è accessibile su [robertoingenito.com](https://robertoingenito.com).
 
-Currently, two official plugins are available:
+## ⚙️ Architettura e Tecnologie
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Questo progetto è costruito come una single-page application veloce e leggera, ed è completamente containerizzato per l'hosting.
 
-## React Compiler
+| Tecnologia | Dettagli |
+|---|---|
+| **Frontend** | React 19 + TypeScript |
+| **Build Tool** | Vite 8.0 |
+| **Styling** | Vanilla CSS (Animazioni e Layout Custom) |
+| **Deploy** | Docker (Multi-stage build: `node:24-slim` builder + `nginx:alpine` runner) |
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🌟 Funzionalità Principali
+- **Interfaccia Moderna:** Design pulito con un cursore personalizzato e sezioni chiare (Hero, Marquee, Servizi, Chi Sono, Contatti).
+- **Animazioni allo Scroll:** Componenti creati ad-hoc (`Reveal.tsx`) che utilizzano custom hooks e l'Intersection Observer nativo per far comparire fluidamente gli elementi, mantenendo alte le performance senza librerie esterne.
+- **Docker Ready:** Container ottimizzato grazie a Nginx, pronto per l'hosting tramite l'infrastruttura omo-lab.
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Prerequisiti
+- [Node.js](https://nodejs.org/)
+- [Docker](https://www.docker.com/) (se si desidera eseguire o testare la build containerizzata)
 
-## Expanding the ESLint configuration
+## 🏃‍♂️ Come Avviare il Progetto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Sviluppo in Locale
+1. Installa le dipendenze:
+   ```bash
+   npm install
+   ```
+2. Avvia il server di sviluppo tramite Vite:
+   ```bash
+   npm run dev
+   ```
+   Il progetto sarà disponibile all'indirizzo http://localhost:5173.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Produzione con Docker
+Per compilare l'immagine e testare il container con il server Nginx in locale:
+```bash
+docker build -t roberto-portfolio .
+docker run -p 8080:80 roberto-portfolio
 ```
+L'applicazione compilata sarà accessibile su http://localhost:8080.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Struttura dei Componenti
+La logica è interamente modulare per facilitare la manutenibilità:
+- `App.tsx` - Componente root che orchestra layout globale e cursore custom.
+- `/src/components` - Componenti UI isolati come `Navbar`, `Hero`, `Marquee`, `Services`, `About`, `Contact`, `Footer` e `Reveal`.
+- `/src/hooks` - Custom React hooks (es. `useInView`).
+- `/src/styles` - File di stile specifici dei componenti per mantenere l'ecosistema CSS pulito.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🔗 Progetti Correlati
+- [Homelab Infrastructure](https://github.com/roberto-ingenito-home-lab/server-raspberry-pi) — Infrastruttura server e deployment Docker
