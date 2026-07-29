@@ -64,7 +64,7 @@ export const NAV_LINKS: [string, string][] = [
 export const EMAIL = "robe.ingenito@gmail.com";
 
 export const SOCIAL_LINKS: [string, string][] = [
-  ["GitHub", "https://github.com/roberto-ingenito"],
+  ["GitHub", "https://github.com/ingenito-roberto"],
   ["LinkedIn", "https://linkedin.com/in/roberto-ingenito-a883b91a2"],
   ["Email", `mailto:${EMAIL}`],
 ];
