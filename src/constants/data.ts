@@ -41,17 +41,10 @@ export const INFRA_SERVICES: Service[] = [
   },
   {
     id: "06",
-    title: "Timesheet",
-    category: "Utility",
-    desc: "Sistema di gestione e generazione di timesheet lavorativi in formato Excel.",
-    url: "timesheet.robertoingenito.com",
-  },
-  {
-    id: "07",
-    title: "CouchDB",
-    category: "Database",
-    desc: "Database dedicato alla sincronizzazione in tempo reale per Obsidian LiveSync.",
-    url: "obsidian.robertoingenito.com",
+    title: "Docmost",
+    category: "Wiki & Documentation",
+    desc: "Piattaforma wiki e documentazione collaborativa personale.",
+    url: "docmost.robertoingenito.com",
   },
 ];
 
